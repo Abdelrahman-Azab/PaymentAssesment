@@ -29,7 +29,6 @@ class SwipeCardFragment : Fragment() {
                 DialogHelper.showLoadingDialog(requireActivity(), "Sending Transaction to The Bank")
                 Thread.sleep(2000)
                 if (cardId.isNotEmpty()) {
-                    // Key-value object to add value in the database
                     val values = ContentValues().apply {
                         put(ZealContentProvider.amount, FlowDataObject.getInstance().amount.toString())
                         put(ZealContentProvider.cardNumber, cardId)
@@ -37,8 +36,6 @@ class SwipeCardFragment : Fragment() {
                         put(ZealContentProvider.name,"Zeal")
                         put(ZealContentProvider.discountAmount,"0.0")
                     }
-
-                    // Insert data using Content URI
                     val uri = requireActivity().contentResolver.insert(ZealContentProvider.CONTENT_URI, values)
                     requireActivity().runOnUiThread {
                         Toast.makeText(requireContext(), uri.toString(), Toast.LENGTH_SHORT).show()

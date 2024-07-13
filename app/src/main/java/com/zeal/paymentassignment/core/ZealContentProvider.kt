@@ -34,11 +34,7 @@ class ZealContentProvider : ContentProvider() {
 
         init {
             uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
-
             uriMatcher!!.addURI(PROVIDER_NAME, "transactions", uriCode)
-
-            // to access a particular row
-            // of the table
             uriMatcher!!.addURI(
                 PROVIDER_NAME,
                 "transactions/#",
