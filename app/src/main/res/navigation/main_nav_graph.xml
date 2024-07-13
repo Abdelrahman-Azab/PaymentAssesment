@@ -37,5 +37,17 @@
         <action
             android:id="@+id/action_mainMenuFragment_to_enterAmountDataFragment"
             app:destination="@id/enterAmountDataFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_receivingAfterDiscountFragment"
+            app:destination="@id/receivingAfterDiscountFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/receivingAfterDiscountFragment"
+        android:name="com.zeal.paymentassignment.ui.ReceivingAfterDiscountFragment"
+        android:label="ReceivingAfterDiscountFragment" >
+        <action
+            android:id="@+id/action_receivingAfterDiscountFragment_to_printReceiptFragment"
+            app:destination="@id/printReceiptFragment" />
     </fragment>
 </navigation>

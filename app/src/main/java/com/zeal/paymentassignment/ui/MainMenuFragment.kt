@@ -13,7 +13,7 @@ import com.zeal.paymentassignment.databinding.FragmentMainMenuBinding
 
 class MainMenuFragment : Fragment() {
 
-    val binding by lazy {
+    private val binding by lazy {
         FragmentMainMenuBinding.inflate(layoutInflater)
     }
 
@@ -21,7 +21,7 @@ class MainMenuFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return binding.root
     }
 
@@ -31,6 +31,10 @@ class MainMenuFragment : Fragment() {
         binding.btnTransaction.setOnClickListener {
             FlowDataObject.getNewInstance()
             findNavController().navigate(R.id.action_mainMenuFragment_to_enterAmountDataFragment)
+        }
+        binding.btnReceive.setOnClickListener {
+            FlowDataObject.getNewInstance()
+            findNavController().navigate(R.id.action_mainMenuFragment_to_receivingAfterDiscountFragment)
         }
     }
 

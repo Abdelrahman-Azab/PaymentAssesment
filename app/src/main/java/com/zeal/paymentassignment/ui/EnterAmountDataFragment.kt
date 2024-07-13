@@ -12,7 +12,7 @@ import com.zeal.paymentassignment.core.FlowDataObject
 import com.zeal.paymentassignment.databinding.FragmentEnterAmount2Binding
 
 class EnterAmountDataFragment : Fragment() {
-    val binding by lazy {
+    private val binding by lazy {
         FragmentEnterAmount2Binding.inflate(layoutInflater)
     }
 
@@ -20,7 +20,7 @@ class EnterAmountDataFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return binding.root
     }
 
@@ -36,7 +36,6 @@ class EnterAmountDataFragment : Fragment() {
                         Toast.makeText(context, "cant be zero", Toast.LENGTH_SHORT).show()
                     else {
                         FlowDataObject.getInstance().amount = amountF;
-
                         findNavController().navigate(R.id.action_enterAmountDataFragment_to_swipeCardFragment)
                     }
                 } catch (e: Exception) {

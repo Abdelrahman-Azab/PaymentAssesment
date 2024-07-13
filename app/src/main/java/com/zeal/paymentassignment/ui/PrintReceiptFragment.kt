@@ -11,7 +11,7 @@ import com.zeal.paymentassignment.core.FlowDataObject
 import com.zeal.paymentassignment.databinding.FragmentPrintReceiptBinding
 
 class PrintReceiptFragment : Fragment() {
-    val binding by lazy {
+    private val binding by lazy {
         FragmentPrintReceiptBinding.inflate(layoutInflater)
     }
 
@@ -20,7 +20,7 @@ class PrintReceiptFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return binding.root
     }
 

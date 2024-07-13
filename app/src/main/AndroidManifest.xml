@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:name=".core.ZealContentProvider"
+            android:authorities="com.zeal.transaction.provider"
+            android:enabled="true"
+            android:exported="true" />
+
     </application>
 
 </manifest>
